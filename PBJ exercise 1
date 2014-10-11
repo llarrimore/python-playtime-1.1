@@ -1,0 +1,36 @@
+oz_pb=21
+oz_j=21
+bread_slice=20
+
+#determine if there's enough ingredients for a sandwich
+if bread_slice >= 2 and oz_j >= 1 and oz_pb >= 1:
+    print "You have enough ingredients for atleast one sandwich!"
+else:
+    print "no PB sandwiches for you -- you better go shopping!"
+
+#determine how many full sandwiches you want to make (method 1)
+#if (bread_slice/2):
+    #print "You can make make {0} full sandwiches".format(bread_slice/2)
+
+#revised method
+
+if  oz_pb <= oz_j and oz_pb <= (bread_slice/2):
+    print "In fact, you can make {0} sandwiches with the ingredients you have.".format(oz_pb)
+elif oz_j <= oz_pb and oz_j <= (bread_slice/2):
+    print "In, fact you can make {0} sandwiches with the ingredients you have.".format(oz_j)
+elif (bread_slice/2) <= oz_pb and (bread_slice/2) <= oz_j:
+            print "In fact, you can make {0} sandwiches with the ingredients you have.".format(bread_slice/2)
+            
+#determine if there is enough bread to make an additional open faced sandwich
+if bread_slice % 2 > 0 and oz_j > (bread_slice/2) and oz_pb > (bread_slice/2):
+    print "Also, you have enough ingredients to make an PB & J open faced sandwich."
+else:
+    print "However, you don't have enough ingredients left over to make a PB&J open-faced sandwich."
+          
+# determine if you can make a peanut butter only sandwich with the left-overs
+
+if bread_slice % 2 > 0 and (oz_pb - oz_j >1):
+    print "You also have enough ingredients to make a peanut butter only sandwich, but do you REALLY want to? Yuck!"
+    
+
+    
